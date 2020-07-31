@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<title>PhilJobs Stats</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="PhilJobsStats.css">
+<body>
+
+<!-- Header -->
+<header class="w3-container w3-padding">
+  <div class="w3-center">
+  <h1 class="w3-xxlarge w3-animate-bottom">Philosophy Job Statistics</h1>
+  <p>Compiled by R. Ahmed-Buehler</p>
+  <p>Code available on 
+<a href="https://github.com/11000001/PhilJobsStats">GitHub</a>; all data is taken from <a href="https://philjobs.org/">PhilJobs</a> and the <a href="https://www.apaonline.org/page/JFP_Data">APA</a>.</p>
+  </div>
+</header> 
+<hr style="height:2px;width:75%;margin:auto;background-color:#b3b3ff"> 
+
+<div class="w3-center">
+	<video id="vid1" width=65% height=auto autoplay >
+	  <source src="JobsPerYear.mp4" type="video/mp4">
+	</video>
+	<h1></h1>
+</div>
+
+
+
+<br>
+
+
+<div class="w3-center">
+<hr style="height:2px;width:75%;margin:auto;background-color:#b3b3ff"> 
+<div class="w3-bar">
+  <button class="w3-bar-item w3-button testbtn" onclick="openCity(event,'AoS')">Areas of Specialization</button>
+  <button class="w3-bar-item w3-button testbtn" onclick="openCity(event,'AoC')">Areas of Concentration</button>
+  <button class="w3-bar-item w3-button testbtn" onclick="openCity(event,'AoSvAoC')">AoS vs AoC</button>
+</div>
+
+
+<div id="AoS" class="w3-container city w3-animate-opacity">
+	<p class="blocktext">What are the most requested areas of specialization on PhilJobs?  If we allow only synonyms (i.e., 'Ethics' and 'Bioethics' are distinct categories), then here are the top entries over the past 7 years: </p>
+	<br>
+	<img src="AoS.png" width="75%" alt="Areas of Specialization (2013-Present)"> 
+	<br>
+	<p class="blocktext">Big fields naturally dominate, and---excluding 'Open'---ethics is king.  Fixing the position of each area, here's the result when we restrict ourselves to jobs posted in 2019 and 2020: </p>
+	<br>
+	<img src="recentAoS.png" width="75%" alt="Recent Areas of Specialization (2019-2020)"> 
+	<br>
+	<p class="blocktext">While the most popular areas are consistent with our cumulative chart, some smaller areas have begun to deviate substantially.  Zooming out and considering general fields rather than specific areas, ethics remains the most sought after specialization:</p>
+	<br>
+	<img src="CoarseAoS.png" width="75%" alt="General Areas of Specialization (2013-Present)"> 
+	<br>
+	<p class="blocktext">This more general picture also highlights a previously hidden interest in the history of Western philosophy.  To round things out, here's how each of these general fields have fared over time:</p>
+	<br>
+	<img src="CoarseAoSoverTime.png" width="75%" alt="General Areas of Specialization over Time (2013-Present)"> 
+	<br>
+	<p class="blocktext">Ethics is thus not only the most sought after AoS (specifically and generally), it's also the field that has seen the most growth on this front.  In contrast, history of Western philosophy---the second most sought after field---has barely managed to hold constant following a recent slump.  The third and fourth most sought after fields---philosophy of science and political philosophy---have both made gains since 2013 but with a degree of year-to-year volatility. </p>
+</div>
+
+<div id="AoC" class="w3-container city w3-animate-opacity">
+	<p class="blocktext">What are the most requested areas of concentration on PhilJobs?  If we again only allow synonyms (i.e., 'Ethics' and 'Bioethics' are distinct categories), then here are the top entries over the past 7 years: </p>
+	<br>
+	<img src="AoC.png" width="75%" alt="Areas of Concentration (2013-Present)"> 
+	<br>
+	<p class="blocktext">While 'Open' is substantially more common as an AoC, ethics is again the most popular area by a wide margin.  Fixing the position of each area, here's the result when we restrict ourselves to jobs posted in 2019 and 2020: </p>
+	<br>
+	<img src="recentAoC.png" width="75%" alt="Recent Areas of Concentration (2019-2020)"> 
+	<br>
+	<p class="blocktext">As earlier, the more common areas are relatively consistent with greater variation amongst more niche specialties.  Grouping areas into general fields again leaves ethics as the clear frontrunner and foregrounds an interest in the history of Western philosophy:</p>
+	<br>
+	<img src="CoarseAoC.png" width="75%" alt="General Areas of Concentration (2013-Present)"> 
+	<br>
+	<p class="blocktext">Finally, here's how these general fields have fared over time:</p>
+	<br>
+	<img src="CoarseAoCoverTime.png" width="75%" alt="General Areas of Concentration over Time (2013-Present)"> 
+	<br>
+	<p class="blocktext">Ethics has again grown substantially though here the growth has been more volatile.  History of Western philosophy meanwhile is more consistent but with only a minor overall gain compared to 2013.  The most interesting trends here are the behavior of philosophy of science, political philosophy, and social philosophy (feminist philosophy, philosophy of race, and philosophy of gender) which have all shown fairly consistent growth over this period. </p>
+</div>
+
+<div id="AoSvAoC" class="w3-container city w3-animate-opacity">
+	<p class="blocktext">How do different areas fare as an area of specialization vs an area of concentration?  In absolute terms, the most striking data point here is how much more prevalent 'Open' is as an AoC.  While less drastic, both logic and critical thinking also appear noticeably more often as a desired AoC than as a desired AoS.  On the other end of the spectrum, general fields (political philosophy, ethics, philosophy of science, philosophy of mind, epistemology, metaphysics) all appear noticeably more as a desired AoS.</p>
+	<br> 
+	<img src="AbsVs.png" width="75%" alt="Absolute Change AoS vs AoC (2013-Present)"> 
+	<br>
+	<p class="blocktext">For a slightly different take on the same data, we can consider what percent of an area's occurrences are as a desired AoS vs as a desired AoC.  Taking a 50/50 split as a baseline, we can see that a number of areas occur almost exclusively as an AoS (set theory, category theory, 16th century philosophy, Japanese philosophy, moral psychology, philosophy of perception, and Chinese philosophy) or almost exclusively as an AoC (critical thinking, Western philosophy, and game theory).</p>
+	<br>
+	<img src="RelVs.png" width="75%" alt="Percentage-AoS Above Neutral (2013-Present)"> 
+	<br>
+	<p class="blocktext">As earlier, we can zoom out and see how all these differences in specific areas add up for general fields.  In absolute terms, philosophy of science, ethics, and political philosophy all appear noticeably more as a desired AoS while formal methods, social philosophy (feminist philosophy, philosophy of race, and philosophy of gender), and aesthetics are more common as an AoC.</p>
+	<br>
+	<img src="CoarseAbsVs.png" width="75%" alt="General Area Absolute Change AoS vs AoC (2013-Present)"> 
+	<br>
+	<p class="blocktext">Looking instead at what percent of a field's occurrences are as a desired AoS vs a desired AoC, the order of the AoC-favored fields above is unchanged.  The AoS-favored fields, however, shift substantially.  While philosophy of science, ethics, and political philosophy all show the greatest numerical discrepancy, both philosophy of mind and epistemology are nevertheless the most AoS-biased relative to their size.</p>
+	<br>
+	<img src="CoarseRelVs.png" width="75%" alt="General Area Percentage-AoS Above Neutral (2013-Present)"> 
+	<br>
+	<p class="blocktext">Almost 70% of all PhilJobs advertisements for philosophy of mind are looking for a specialist while almost 60% of all formal methods advertisements are only looking for an area of concentration!</p>
+</div>
+
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-16">
+<p align="right"> Last Updated: 7/31/2020</p>
+</footer>
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+document.getElementById('vid1').addEventListener('ended',myHandler,false);
+function myHandler(e) {
+    console.log('ended');
+    setTimeout(function(){
+        document.getElementById('vid1').play();
+    }, 3000);
+}
+</script>
+
+</body>
+</html>
